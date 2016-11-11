@@ -5,8 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MashBattle"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="720" Width="1000">
     <Grid>
-        
+        <Canvas x:Name="arenaPanel" Margin="10,96,0,40" Background="#FF363636" HorizontalAlignment="Left" Width="962">
+            <Rectangle Fill="#FF3E37DC" Stroke="Black" Height="553" Width="220" ClipToBounds="True" Canvas.Top="0" Canvas.Left="0" MaxHeight="545" MaxWidth="220"/>
+            <Rectangle Fill="#FF269C03" Height="553" Stroke="Black" Width="220" Canvas.Left="742" VerticalAlignment="Center" HorizontalAlignment="Center" Canvas.Top="0" MaxHeight="545" MaxWidth="220"/>
+            <Ellipse x:Name="playerOrb" Fill="#FFDC3737" Height="100" Canvas.Left="431" Stroke="Black" Canvas.Top="226" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Canvas>
+        <Menu x:Name="menu" Height="30" VerticalAlignment="Top">
+            <MenuItem x:Name="comItem" Header="COM1" FontSize="20"/>
+            <MenuItem x:Name="optionItem" Header="Options" FontSize="20" Margin="0"/>
+            <MenuItem x:Name="updateItem" Header="Update" FontSize="20" Margin="300,0,0,0"/>
+            <MenuItem Header="Options" FontSize="20" Margin="297,0,0,0"/>
+            <MenuItem x:Name="comItem2" Header="COM1" FontSize="20" HorizontalContentAlignment="Right" Margin="0"/>
+        </Menu>
+        <Label x:Name="mashLabel" Content="Mashes: 0" HorizontalAlignment="Left" Margin="612,65,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="startButton" Content="Start" HorizontalAlignment="Left" Margin="451,49,0,0" VerticalAlignment="Top" Width="90" Click="startButton_Click" Height="38" FontSize="24"/>
+        <Label x:Name="label" Content="Versus: 10 Hz" HorizontalAlignment="Left" Margin="612,47,0,0" VerticalAlignment="Top" Width="83"/>
+        <Label x:Name="countdownLabel" Content="GO!" Margin="446,336,0,0" VerticalAlignment="Top" Height="71" FontSize="38" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="90" FontWeight="Bold" Opacity="0"/>
+        <StatusBar x:Name="statusBar" Height="35" VerticalAlignment="Bottom">
+            <StatusBarItem x:Name="statusLine" Content="StatusBarItem" FontSize="20"/>
+        </StatusBar>
+        <ComboBox x:Name="p2_nameBox" Margin="0,49,10,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="220" FontSize="24"/>
+        <ComboBox x:Name="p1_nameBox" HorizontalAlignment="Left" Margin="10,49,0,0" VerticalAlignment="Top" Width="220" Height="38" FontSize="24"/>
+        <CheckBox x:Name="checkBox" Content="Two Buttons" Margin="278,57,586,0" VerticalAlignment="Top" Height="26" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
     </Grid>
 </Window>
