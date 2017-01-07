@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MashBattle
 {
-    class Stats
+    public class Stats
     {
         //readonly string BASE = ".\\Stats\\";
 

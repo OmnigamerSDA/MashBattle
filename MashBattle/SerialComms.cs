@@ -36,7 +36,7 @@ namespace MashBattle
 
         SerialPort _datPort;
         int playerNum = 0;
-        MainWindow main;
+        BattleWindow main;
 
         MashSet mashes;
         MashSet mashes2;
